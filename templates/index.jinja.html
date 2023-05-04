@@ -29,15 +29,30 @@
 
 <body>
     <div class="container-md">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link" href="#">Features</a>
+                        <a class="nav-link" href="#">Pricing</a>
+                        <a class="nav-link disabled">Disabled</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
         <div class="row">
+            {% for key,values in content_data.items() %}
             <div class="col-12 col-md-6 col-xl-4 border bg-success bg-opacity-50">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, aperiam libero! Aut dolore vero asperiores dolores magnam ab impedit nihil consequatur saepe rerum, sapiente tenetur rem dolorum aliquid praesentium minima.
+                <h3>{{key}}</h3>
+                <p>{{values}}</p>
             </div>
-            <div class="col-12 col-md-6 col-xl-4 border bg-primary bg-opacity-50">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga eveniet blanditiis reprehenderit quo, voluptatum distinctio rem magni sint inventore consequatur hic dolores est fugit nihil amet aliquam, unde dolore cum.
-            </div>
-            <div class="col-12 col-md-6 col-xl-4 border bg-info bg-opacity-50">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, porro laboriosam omnis ullam sunt earum vel est aut obcaecati officiis, atque expedita? Dignissimos atque dolores, accusantium cumque minima fugit natus!
+            {% endfor %}
             </div>
         </div>
     </div>
