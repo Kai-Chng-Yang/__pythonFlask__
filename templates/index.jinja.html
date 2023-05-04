@@ -1,14 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boostrap</title>
-    <link rel="stylesheet" href="{url_for('static, filename='css/bootstrap.min.css')}">
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+    <style>
+        /* X-Small devices (portrait phones, less than 576px)*/
+        /* No media query for `xs` since this is the default in Bootstrap*/
+        /*Small devices (landscape phones, 576px and up)*/
+        @media (min-width: 576px) {}
+
+        /* Medium devices (tablets, 768px and up)*/
+        @media (min-width: 768px) {}
+
+        /* Large devices (desktops, 992px and up)*/
+        @media (min-width: 992px) {}
+
+        /* X-Large devices (large desktops, 1200px and up)*/
+        @media (min-width: 1200px) {}
+
+        /* XX-Large devices (larger desktops, 1400px and up)*/
+        @media (min-width: 1400px) {}
+    </style>
 </head>
+
 <body>
-    <h1>Learning</h1>
+    <div class="container-md">
+        <div class="row">
+            <div class="col-12 col-md-6 col-xl-4 border bg-success bg-opacity-50">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, aperiam libero! Aut dolore vero asperiores dolores magnam ab impedit nihil consequatur saepe rerum, sapiente tenetur rem dolorum aliquid praesentium minima.
+            </div>
+            <div class="col-12 col-md-6 col-xl-4 border bg-primary bg-opacity-50">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga eveniet blanditiis reprehenderit quo, voluptatum distinctio rem magni sint inventore consequatur hic dolores est fugit nihil amet aliquam, unde dolore cum.
+            </div>
+            <div class="col-12 col-md-6 col-xl-4 border bg-info bg-opacity-50">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, porro laboriosam omnis ullam sunt earum vel est aut obcaecati officiis, atque expedita? Dignissimos atque dolores, accusantium cumque minima fugit natus!
+            </div>
+        </div>
+    </div>
     <script src="{{url_for('static', filename='js/bootstrap.bundle.min.js')}}"></script>
 </body>
+
 </html>
